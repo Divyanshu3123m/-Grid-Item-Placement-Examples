@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Item Placement</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .container {
+        height: 25vh;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 1fr 1fr 2.5fr;
+        grid-template-rows: 1fr 2fr;
+      }
+      .c {
+        background-color: lightseagreen;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container2 {
+        height: 50vh;
+        gap: 5px;
+        /* font-size: 3rem; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
+      }
+      .cowboy {
+        background-color: lightseagreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: span 2;
+        grid-row: span;
+        font-size: 3rem;
+      }
+      .astronout {
+        background-color: lightseagreen;
+        font-size: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* grid-column: span 2; */
+        /* grid-row:span  */
+      }
+      .book {
+        font-weight: 5rem;
+        background-color: lightsteelblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5rem;
+        /* grid-column: span 2; */
+        /* grid-row:span  */
+      }
+      .h {
+        background-color: rgb(227, 99, 99);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+      }
+      .container3 {
+        height: 50vh;
+        display: grid;
+        gap: 5px;
+        margin-top: 10px;
+        grid-template-columns: repeat(3, 2.5fr);
+        grid-template-rows: repeat(3, 6fr);
+      }
+      .cowboy1 {
+        grid-column: span 3;
+      }
+      .astronout1 {
+        /* order:1; */
+        /* grid-column: span 2; */
+
+        /* grid-column-start:1; 
+        grid-column-end:3;
+        grid-row-start:2;
+        grid-row-end:3; */
+
+        grid-area: 2 / 1 / 3 /3;
+        /* the first value is row start 
+                                 the second value is column start
+                                 the third value is row end 
+                                 the fourth value is column end */
+      }
+
+      .container4 {
+        height: 50vh;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+      .w {
+        background-color: lightseagreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5rem;
+      }
+      .book3 {
+        grid-area: 1/2/3/4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="c 1">Lorem</div>
+      <div class="c 2">Lorem ipsum dolor sit amet.</div>
+      <div class="c 3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </div>
+    </div>
+
+    <div class="container2">
+      <div class="cowboy">🤠</div>
+      <div class="astronout">🧑‍🚀</div>
+      <div class="book">📖</div>
+    </div>
+
+    <div class="container3">
+      <div class="h cowboy1">🤠</div>
+      <div class="h astronout1">🧑‍🚀</div>
+      <div class="h book1">📖</div>
+    </div>
+
+    <div class="container4">
+      <div class="w cowboy2">🤠</div>
+      <div class="w book3">📖</div>
+      <div class="w astronout2">🧑‍🚀</div>
+    </div>
+  </body>
+</html>
